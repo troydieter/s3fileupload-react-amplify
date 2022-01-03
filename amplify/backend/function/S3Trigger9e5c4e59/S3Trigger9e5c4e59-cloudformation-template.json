@@ -147,7 +147,12 @@
 						"Effect": "Allow",
 						"Action": "sqs:*",
 						"Resource": "arn:aws:sqs:us-east-1:550767824695:upload.fifo"
-						}
+						},
+						{
+							"Effect": "Allow",
+							"Action": "s3:*",
+							"Resource": "arn:aws:s3:::s3fileuploadamplify*"
+							}
 					]
 				}
 			}
