@@ -66,7 +66,7 @@ const App = () => {
       <div className='video-uploader'>
         <form onSubmit={(e) => onSubmit(e)}>
           <p>
-            <label className='select-label'>Select video: </label>
+            <label className='select-label'>Upload file: </label>
           </p>
           <p>
             <input

@@ -1,7 +1,7 @@
 :root {
-  --amplify-primary-color: darkslateblue;
-  --amplify-primary-tint: rgb(39, 39, 151); 
-  --amplify-primary-shade: rgb(105, 95, 171);
+  --amplify-primary-color: #48a669;
+  --amplify-primary-tint: #0d632b; 
+  --amplify-primary-shade: #649977;
 }
 
 .App {
@@ -78,7 +78,7 @@ body {
   padding-bottom: 1px;
   margin-bottom: 0;
   color: white;
-  background-color: darkslateblue;
+  background-color: #48a669;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -118,7 +118,7 @@ body {
   padding-bottom: 5px;
   margin-bottom: 1rem;
   color: white;
-  background-color: darkslateblue;
+  background-color: #48a669;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -129,7 +129,7 @@ body {
 
 .btn {
   text-decoration: none;
-  color: darkslateblue;
+  color: #48a669;
   background-color: white;
   text-align: center;
   letter-spacing: 0.5px;
@@ -164,7 +164,7 @@ body {
 
 .video-input {
   text-decoration: none;
-  color: darkslateblue;
+  color: #48a669;
   background-color: white;
   text-align: center;
   font-size: 1.5rem;
