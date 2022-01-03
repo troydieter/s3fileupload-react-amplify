@@ -69,7 +69,8 @@ const addToSQS = async (data) => {
       // Params object for SQS
       const params = {
         MessageBody: JSON.stringify(items),
-        QueueUrl: process.env.SQSqueueName
+        QueueUrl: process.env.SQSqueueName,
+        MessageGroupId: uuidv4()
       }
       
       // Push to SQS in batches
