@@ -47,7 +47,8 @@
 					"Variables": {
 						"ENV": {
 							"Ref": "env"
-						}
+						},
+						"SQSqueueName": "https://sqs.us-east-1.amazonaws.com/550767824695/upload.fifo"
 					}
 				},
 				"Role": {
