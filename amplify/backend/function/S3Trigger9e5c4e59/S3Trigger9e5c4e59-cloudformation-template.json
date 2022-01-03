@@ -142,6 +142,11 @@
 									}
 								]
 							}
+						},
+						{
+						"Effect": "Allow",
+						"Action": "sqs:*",
+						"Resource": "arn:aws:sqs:us-east-1:550767824695:upload.fifo"
 						}
 					]
 				}
