@@ -21,7 +21,8 @@
 			"Properties": {
 			   "QueueName": "IncomingData.fifo",
 			   "FifoQueue": true,
-			   "ContentBasedDeduplication": true
+			   "ContentBasedDeduplication": true,
+			   "KmsMasterKeyId": "alias/aws/sqs"
 				},
 			"Type": "AWS::SQS::Queue"
 			},
