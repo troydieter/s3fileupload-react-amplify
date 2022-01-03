@@ -4,8 +4,7 @@ import Amplify, { Storage } from 'aws-amplify'
 import {
   AmplifyAuthenticator,
   AmplifySignOut,
-  AmplifySignIn,
-  AmplifySignUp,
+  AmplifySignIn
 } from '@aws-amplify/ui-react'
 import { MdSend /* MdList */ } from 'react-icons/md'
 import awsConfig from './aws-exports'
@@ -54,23 +53,19 @@ const App = () => {
         headerText='Sign-In with Your E-Mail Address - Feedback Processor'
         slot='sign-in'
       />
-      <AmplifySignUp
-        headerText='Sign-Up with Your Valid E-Mail Address - Feedback Processor'
-        slot='sign-up'
-      />
       <div className='header'>
         <h2>
           <a href='/'>Feedback Processor</a>
         </h2>
       </div>
-      <div className='video-uploader'>
+      <div className='file-uploader'>
         <form onSubmit={(e) => onSubmit(e)}>
           <p>
             <label className='select-label'>Upload file: </label>
           </p>
           <p>
             <input
-              className='video-input'
+              className='file-input'
               type='file'
               id='file-input'
               accept='.csv,.txt,.pdf,.json,.yaml,.doc,.docx'

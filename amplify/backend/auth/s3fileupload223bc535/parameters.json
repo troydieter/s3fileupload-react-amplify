@@ -1,6 +1,6 @@
 {
     "identityPoolName": "s3fileupload223bc535_identitypool_223bc535",
-    "allowUnauthenticatedIdentities": true,
+    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "s3file223bc535",
     "userPoolName": "s3fileupload223bc535_userpool_223bc535",
     "autoVerifiedAttributes": [
