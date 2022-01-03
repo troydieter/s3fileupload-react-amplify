@@ -17,6 +17,14 @@
 		}
 	},
 	"Resources": {
+		"IncomingData": {
+			"Properties": {
+			   "QueueName": "IncomingData.fifo",
+			   "FifoQueue": true,
+			   "ContentBasedDeduplication": true
+				},
+			"Type": "AWS::SQS::Queue"
+			},
 		"LambdaFunction": {
 			"Type": "AWS::Lambda::Function",
 			"Metadata": {
@@ -48,7 +56,9 @@
 						"ENV": {
 							"Ref": "env"
 						},
-						"SQSqueueName": "https://sqs.us-east-1.amazonaws.com/550767824695/upload.fifo"
+						"SQSqueueName": {
+							"Ref": "IncomingData"
+						}
 					}
 				},
 				"Role": {
@@ -146,7 +156,12 @@
 						{
 						"Effect": "Allow",
 						"Action": "sqs:*",
-						"Resource": "arn:aws:sqs:us-east-1:550767824695:upload.fifo"
+						"Resource": {
+							"Fn::GetAtt": [
+								"IncomingData",
+								"Arn"
+							]
+						}
 						},
 						{
 							"Effect": "Allow",
@@ -181,6 +196,30 @@
 			"Value": {
 				"Ref": "LambdaExecutionRole"
 			}
-		}
+		},
+		"QueueName": {
+			"Description": "The name of the queue",
+			"Value": {
+			   "Fn::GetAtt": [
+				  "IncomingData",
+				  "QueueName"
+			   ]
+			}
+		 },
+		 "QueueURL": {
+			"Description": "The URL of the queue",
+			"Value": {
+			   "Ref": "IncomingData"
+			}
+		 },
+		 "QueueARN": {
+			"Description": "The ARN of the queue",
+			"Value": {
+			   "Fn::GetAtt": [
+				  "IncomingData",
+				  "Arn"
+			   ]
+			}
+		 }
 	}
 }
