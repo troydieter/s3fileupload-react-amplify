@@ -223,7 +223,15 @@
                         }
                     ]
                 },
-                 
+                "BucketEncryption": {
+					"ServerSideEncryptionConfiguration": [
+						{
+							"ServerSideEncryptionByDefault": {
+							  "SSEAlgorithm": "AES256"
+							}
+						  }
+					]
+				},
                 "NotificationConfiguration": {
                     "LambdaConfigurations": [
                         {
