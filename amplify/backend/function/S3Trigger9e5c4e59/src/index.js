@@ -36,7 +36,7 @@ exports.handler = async (event) => {
 const addToSQS = async (data) => {
   // Separate into batches for upload
   let batches = []
-  const BATCH_SIZE = 25
+  const BATCH_SIZE = 1
 
   while (data.length > 0) {
     batches.push(data.splice(0, BATCH_SIZE))
